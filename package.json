@@ -12,6 +12,8 @@
     "replace-ip-for-all-zones": "ts-node src/executables/replace-ip-for-all-zones.ts",
     "replace-ip-for-zone": "ts-node src/executables/replace-ip-for-zone.ts",
     "replace-ip-for-domain": "ts-node src/executables/replace-ip-for-domain.ts",
+    "set-proxy-status-for-all-zones": "ts-node src/executables/set-proxy-status-for-all-zones.ts",
+    "set-proxy-status-for-domain": "ts-node src/executables/set-proxy-status-for-domain.ts",
     "delete-moved-zones": "ts-node src/executables/delete-moved-zones.ts"
   },
   "author": "Agapios Panos",
