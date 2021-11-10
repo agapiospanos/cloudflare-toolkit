@@ -21,24 +21,26 @@ interface DnsRecordMeta {
 	source: string;
 }
 
-enum DnsRecordTypes {
-	A,
-	AAAA,
-	CNAME,
-	HTTPS,
-	TXT,
-	SRV,
-	LOC,
-	MX,
-	NS,
-	SPF,
-	CERT,
-	DNSKEY,
-	DS,
-	NAPTR,
-	SMIMEA,
-	SSHFP,
-	SVCB,
-	TLSA,
-	URI
-}
+export const DnsRecordTypes = {
+	A: 'A',
+	AAAA: 'AAAA',
+	CNAME: 'CNAME',
+	HTTPS: 'HTTPS',
+	TXT: 'TXT',
+	SRV: 'SRV',
+	LOC: 'LOC',
+	MX: 'MX',
+	NS: 'NS',
+	SPF: 'SPF',
+	CERT: 'CERT',
+	DNSKEY: 'DNSKEY',
+	DS: 'DS',
+	NAPTR: 'NAPTR',
+	SMIMEA: 'SMIMEA',
+	SSHFP: 'SSHFP',
+	SVCB: 'SVCB',
+	TLSA: 'TLSA',
+	URI: 'URI',
+};
+
+export type DnsRecordTypes = typeof DnsRecordTypes[keyof typeof DnsRecordTypes];

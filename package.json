@@ -14,7 +14,8 @@
     "replace-ip-for-domain": "ts-node src/executables/replace-ip-for-domain.ts",
     "set-proxy-status-for-all-zones": "ts-node src/executables/set-proxy-status-for-all-zones.ts",
     "set-proxy-status-for-domain": "ts-node src/executables/set-proxy-status-for-domain.ts",
-    "delete-moved-zones": "ts-node src/executables/delete-moved-zones.ts"
+    "delete-moved-zones": "ts-node src/executables/delete-moved-zones.ts",
+    "delete-record-for-domain": "ts-node src/executables/delete-record-for-domain.ts"
   },
   "author": "Agapios Panos",
   "license": "Apache-2.0",

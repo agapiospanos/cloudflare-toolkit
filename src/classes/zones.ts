@@ -105,4 +105,25 @@ export class Zones {
 			return Promise.reject();
 		}
 	}
+
+	public static async setProxiedStatusForAllZones(enableProxy: boolean, onlyForSite = false): Promise<void> {
+		try {
+			const zones: Zone[] = await this.getAllZones();
+			return this.setProxiedStatusForZones(zones, enableProxy, onlyForSite);
+		} catch (error) {
+			console.error('An error occurred while trying to list zones', error);
+		}
+		return Promise.resolve();
+	}
+
+	public static async setProxiedStatusForZones(zones: Zone[], enableProxy: boolean, onlyForSite = false): Promise<void> {
+		for (const zone of zones) {
+			try {
+				await DnsRecords.changeProxyStatus(zone.id, enableProxy, onlyForSite);
+			} catch (error) {
+				console.error('An error occurred while replacing the ip in zone with name', zone.name, error);
+			}
+		}
+		return Promise.resolve();
+	}
 }

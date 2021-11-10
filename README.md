@@ -23,8 +23,9 @@ This software is provided as is. I do not hold any responsibility for any misuse
 5. run one of the following commands
     * ```npm run list-zones```
     * ```npm run replace-ip-for-all-zones <source_ip> <target_ip>```
-    * ```npm run replace-ip-for-domain <source_ip> <target_ip> example.com```
+    * ```npm run replace-ip-for-domain <source_ip> <target_ip> <domain>```
     * ```npm run replace-ip-for-zone <source_ip> <target_ip> <zone_id>```
     * ```npm run set-proxy-status-for-all-zones <enable_proxy(true|false)> <only_for_site(true|false -> optional default is false)>```
     * ```npm run set-proxy-status-for-domain <domain> <enable_proxy(true|false)> <only_for_site(true|false -> optional default is false)>```
     * ```npm run delete-moved-zones```
+    * ```npm run delete-record-for-domain <domain> <record_type> <record_name> <domain>```
